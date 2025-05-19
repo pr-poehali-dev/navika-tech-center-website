@@ -1,16 +1,7 @@
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import Icon from "@/components/ui/icon";
-import { useEffect } from "react";
-import Header from "@/components/naveka/Header";
-import Hero from "@/components/naveka/Hero";
-import Services from "@/components/naveka/Services";
-import About from "@/components/naveka/About";
-import CTASection from "@/components/naveka/CTASection";
-import ContactSection from "@/components/naveka/ContactSection";
-import Footer from "@/components/naveka/Footer";
 
-const servicesData = [
+// Данные для сайта техцентра "НАВЕКА"
+
+export const servicesData = [
   {
     icon: "Wrench",
     title: "Техническое обслуживание",
@@ -33,7 +24,7 @@ const servicesData = [
   },
 ];
 
-const advantagesData = [
+export const advantagesData = [
   {
     icon: "Clock",
     title: "Быстрое обслуживание",
@@ -51,24 +42,35 @@ const advantagesData = [
   },
 ];
 
-const IndexPage = () => {
-  useEffect(() => {
-    document.title = "НАВЕКА - Автомобильный техцентр";
-  }, []);
-
-  return (
-    <div className="flex flex-col min-h-screen">
-      <Header />
-      <main>
-        <Hero />
-        <Services />
-        <About />
-        <CTASection />
-        <ContactSection />
-      </main>
-      <Footer />
-    </div>
-  );
+export const contactInfo = {
+  address: "г. Москва, ул. Автосервисная, 42",
+  phone: "+7 (999) 123-45-67",
+  email: "info@naveka-auto.ru",
+  workingHours: [
+    { days: "Пн-Пт", hours: "9:00 - 20:00" },
+    { days: "Сб", hours: "10:00 - 18:00" },
+    { days: "Вс", hours: "выходной" },
+  ]
 };
 
-export default IndexPage;
+export const socialMedia = [
+  { name: "Facebook", icon: "Facebook" },
+  { name: "Instagram", icon: "Instagram" },
+  { name: "Telegram", icon: "MessageCircle" },
+  { name: "Youtube", icon: "Youtube" },
+];
+
+export const footerLinks = {
+  services: [
+    { title: "Техническое обслуживание", href: "#" },
+    { title: "Ремонт двигателя", href: "#" },
+    { title: "Автоэлектрика", href: "#" },
+    { title: "Кузовной ремонт", href: "#" },
+  ],
+  information: [
+    { title: "О компании", href: "#" },
+    { title: "Цены", href: "#" },
+    { title: "Акции", href: "#" },
+    { title: "Контакты", href: "#" },
+  ],
+};
